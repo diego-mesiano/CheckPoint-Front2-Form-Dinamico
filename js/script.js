@@ -17,4 +17,18 @@ document.querySelector("form").addEventListener("submit",function(event){
     card.appendChild(img);
     containerCards.appendChild(card);
 
+    validarInputsForm();
 })
+
+function validarInputsForm() {
+  let nome = document.getElementById("nome");
+  let descricao = document.getElementById("descricao");
+  let url = document.getElementById("url");
+
+  nome.value.trim();
+  descricao.value.trim();
+  url.value.trim();
+
+  descricao.value[0].toUpperCase() + descricao.value.substr(1);
+  
+}
