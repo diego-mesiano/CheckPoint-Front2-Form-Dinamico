@@ -4,7 +4,7 @@
 #container{
     background-color: rgb(54, 54, 54);
     color: rgb(219, 219, 219);
-    width: 800px;
+    width: 550px;
 }
 
 h1{
@@ -32,6 +32,7 @@ button{
 }
 
 .button {
+    margin: 10px;
 	color: #fff;
 	background: #4a89ca;
 	transition-duration: .4s, 1s, .5s;
@@ -48,4 +49,10 @@ button{
 	background: #a33830;
 }
 
-
+#darkMode{
+    background-color: blue;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px 40px 10px 40px;
+    margin-top: 10px;
+}
