@@ -5,28 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Form Dinamico</title>
-    <link rel="stylesheet" href=".\css\style.css">
 </head>
 
+
 <body>
-    <h1>Formulário dinamico - Mesa 1</h1>
-    <div id="container">
-        <div id="boxForm">
-            <form action="">
-              <h3>Gerador de Cards</h3>
-              <input id="nome" type="text" placeholder="Nome do Filme" maxlength="150" required>
-              <input id="url" type="url" placeholder="URL do Filme" maxlength="2000" required>
-              <textarea id="descricao" cols="30" rows="10" maxlength="1000" required></textarea>
-
-              <button type="submit" id="gerar">Gerar Card</button>
-
-              <button id="limpar"><a href="./index.html">Começar de novo</a></button>
-            </form>
-            <input type="checkbox" name="darkMode" id="darkMode">
-            <label for="darkMode">Modo escuro</label>
+    <Header>
+        <div class="title">
+            <h1>CARDS CREATOR</h1>
         </div>
-    </div>
+    </Header>
+    <main>
+        <div class="container">
+            <div class="boxForm">
+                <form class="form" action="">
+                    <input id="name" type="text" maxlength="150" placeholder="Nome do Card" required>
+                    <input id="url" type="url" maxlength="2000" placeholder="URL da Imagem" required>
+                    <textarea id="description" cols="30" rows="10" maxlength="1000" placeholder="Descrição do Card"
+                        required></textarea>
+
+                    <button type="submit">CRIAR CARD</button>
+                    <button type="reset">RECOMEÇAR</button>
+                    <!-- <button class="button"><a href="./index.html">Recomeçar</a></button> -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>TEMA ESCURO</h3>
+        <section title=".darkMode">
+            <div class="darkMode">
+                <input type="checkbox" value="None" id="darkMode" name="check" checked />
+                <label for="darkMode"></label>
+            </div>
+        </section>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 

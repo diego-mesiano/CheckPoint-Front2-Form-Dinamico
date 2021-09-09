@@ -2,10 +2,10 @@ let nome = document.getElementById("nome");
 let sinopse = document.getElementById("descricao");
 let url = document.getElementById("url");
 
-document.querySelector("form").addEventListener("submit",function(event){
-    event.preventDefault();
-    formatarTextos();
-    criarObjetoCard(nome.value, url.value, sinopse.value);
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  formatarTextos();
+  criarObjetoCard(nome.value, url.value, sinopse.value);
 })
 
 function formatarTextos() {
@@ -21,13 +21,13 @@ function criarObjetoCard(nome, url, sinopse) {
   arrayFilmes = [];
   let filmesLocalStorage = JSON.parse(localStorage.getItem("@GERADORCARD"));
 
-  if(filmesLocalStorage) {
+  if (filmesLocalStorage) {
     filmesLocalStorage.forEach(filme => arrayFilmes.push(filme));
-  } 
+  }
 
   let card = {
     nome,
-    url, 
+    url,
     sinopse
   }
 
@@ -41,7 +41,7 @@ function criarObjetoCard(nome, url, sinopse) {
 function renderizarCard(nome, url, sinopse) {
 
   let container = document.getElementById("container");
-    
+
   //criando div pai
   let containerCards = document.createElement("div");
   container.appendChild(containerCards);
@@ -60,6 +60,7 @@ function renderizarCard(nome, url, sinopse) {
   card.appendChild(p);
   card.appendChild(img);
   containerCards.appendChild(card);
+
 }
 
 window.onload = () => {
@@ -68,7 +69,7 @@ window.onload = () => {
 
   console.log(arrayFilmes);
 
-  for(filme of arrayFilmes) {
+  for (filme of arrayFilmes) {
     renderizarCard(filme.nome, filme.url, filme.sinopse);
   }
 }
