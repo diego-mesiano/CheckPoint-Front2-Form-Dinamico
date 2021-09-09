@@ -19,7 +19,7 @@ function formatarTextos() {
 function criarObjetoCard(nome, url, sinopse) {
 
   arrayFilmes = [];
-  let filmesLocalStorage = JSON.parse(localStorage.getItem("@GERADORCARD"));
+  let filmesLocalStorage = JSON.parse(localStorage.getItem("@CARDCREATOR"));
 
   if (filmesLocalStorage) {
     filmesLocalStorage.forEach(filme => arrayFilmes.push(filme));
@@ -33,38 +33,33 @@ function criarObjetoCard(nome, url, sinopse) {
 
   arrayFilmes.push(card);
 
-  localStorage.setItem('@GERADORCARD', JSON.stringify(arrayFilmes));
+  localStorage.setItem('@CARDCREATOR', JSON.stringify(arrayFilmes));
   location.reload();
 }
 
-
 function renderizarCard(nome, url, sinopse) {
 
-  let container = document.getElementById("container");
-
   //criando div pai
-  let containerCards = document.createElement("div");
-  container.appendChild(containerCards);
+  let containerCards = document.getElementById("containerCards");
 
   //criando o card1
   let card = document.createElement("div");
   let h2 = document.createElement("h2");
-  let p = document.createElement("p");
   let img = document.createElement("img");
+  let p = document.createElement("p");
 
   h2.innerHTML = nome;
   img.src = url;
   p.innerHTML = sinopse;
 
   card.appendChild(h2);
-  card.appendChild(p);
   card.appendChild(img);
+  card.appendChild(p);
   containerCards.appendChild(card);
-
 }
 
 window.onload = () => {
-  let filmes = localStorage.getItem("@GERADORCARD");
+  let filmes = localStorage.getItem("@CARDCREATOR");
   let arrayFilmes = JSON.parse(filmes);
 
   console.log(arrayFilmes);
@@ -82,7 +77,7 @@ function darkTheme(el, color) {
   if (checked == 0) {
     el.addEventListener("click", function (event) {
       el.style.backgroundColor = "black";
-
+      el.style.color = "rgb(100,100,100)";
     })
     checked = 1;
   }

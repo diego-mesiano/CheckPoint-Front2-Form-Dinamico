@@ -15,10 +15,21 @@
         <div class="title">
             <h1>CARDS CREATOR</h1>
         </div>
+        <div>
+            <section class="containerDarkMode" title=".darkMode">
+                <h3>TEMA ESCURO</h3>
+                <div class="darkMode">
+                    <input onclick="darkTheme(body, 'rgb(200, 200, 200)')" type="checkbox" id="darkMode" name="check" />
+                    <label for="darkMode"></label>
+                </div>
+            </section>
+        </div>
     </Header>
     <main>
         <div class="container">
+
             <div class="boxForm">
+
                 <form class="form" action="">
                     <input id="name" type="text" maxlength="150" placeholder="Nome do Card" required>
                     <input id="url" type="url" maxlength="2000" placeholder="URL da Imagem" required>
@@ -30,18 +41,13 @@
                     <!-- <button class="button"><a href="./index.html">Recomeçar</a></button> -->
                 </form>
             </div>
+            <div id="containerCards"></div>
         </div>
+
     </main>
 
-    <footer>
-        <h3>TEMA ESCURO</h3>
-        <section title=".darkMode">
-            <div class="darkMode">
-                <input onclick="darkTheme(body, 'rgb(200, 200, 200)')" type="checkbox" id="darkMode" name="check" />
-                <label for="darkMode"></label>
-            </div>
-        </section>
-    </footer>
+    <!-- <footer>
+    </footer> -->
     <script src="./js/script.js"></script>
 </body>
 
