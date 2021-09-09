@@ -1,5 +1,5 @@
-let nome = document.getElementById("nome");
-let sinopse = document.getElementById("descricao");
+let nome = document.getElementById("name");
+let sinopse = document.getElementById("description");
 let url = document.getElementById("url");
 
 document.querySelector("form").addEventListener("submit", function (event) {
@@ -71,5 +71,26 @@ window.onload = () => {
 
   for (filme of arrayFilmes) {
     renderizarCard(filme.nome, filme.url, filme.sinopse);
+  }
+}
+
+// Alterar o tema da página
+let body = document.querySelector("body");
+let checked = 0;
+
+function darkTheme(el, color) {
+  if (checked == 0) {
+    el.addEventListener("click", function (event) {
+      el.style.backgroundColor = "black";
+
+    })
+    checked = 1;
+  }
+
+  else {
+    el.addEventListener("click", function (event) {
+      el.style.backgroundColor = color;
+    })
+    checked = 0;
   }
 }
