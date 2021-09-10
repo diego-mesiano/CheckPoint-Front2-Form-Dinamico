@@ -139,8 +139,8 @@ input {
 
 input:hover {
   background-color: rgb(120, 120, 120);
-  color: rgb(50, 50, 50);
-  border-radius: 5px;
+  color: rgb(75, 75, 75);
+  border-radius: 15px;
   /* transform: skew(180deg,180deg); */
 }
 
@@ -165,16 +165,20 @@ textarea {
 textarea:hover {
   background-color: rgb(120, 120, 120);
   color: rgb(50, 50, 50);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
-/* Placeholder dos Inputs */
-placeholder {
-  font-size: 30px;
-  text-decoration: none;
-  color: rgb(50, 50, 50);
-  margin-left: 10px;
+/* Placeholder dos Inputs*/
+input::placeholder, textarea::placeholder{
+  color: rgb(75, 75, 75);
 }
+
+/*Retirando as bordas do input ao seleciona-lo*/
+textarea:focus, input:focus {
+  box-shadow: 0;
+  outline: 0;
+  }
+
 
 /* Botões Submit e Reset */
 button {
