@@ -5,10 +5,12 @@
   padding: 0;
   margin: 0;
   border: 0;
+  z-index: 1;
 }
 
 /* Background da Página */
 body {
+  z-index: 1;
   background-color: rgb(200, 200, 200);
 }
 
@@ -23,6 +25,9 @@ header {
   text-align: center;
   background-color: rgb(0, 0, 0);
   color: orangered;
+  z-index: 2;
+  
+  
 }
 
 .title {
@@ -119,9 +124,10 @@ main {
 form {
   background-color: orangered;
   border-radius: 15px;
-  height: 455px;
+  height: 483px;
   padding: 20px;
   width: 40vw;
+  
 }
 
 /* Inputs do Formulário */
@@ -209,6 +215,8 @@ h2 {
   color: orangered;
 }
 
+
+
 /* Responsividade */
 
 
@@ -235,7 +243,10 @@ h2 {
   button {
     width: 100%;
   }
-
+  
+  #tituloPopUp{
+    font-size: 15px;
+  }
   
 }
 
@@ -259,6 +270,9 @@ h2 {
   textarea{
     height: 200px;
   }
+  #tituloPopUp{
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 295px) {
@@ -276,6 +290,13 @@ h2 {
   textarea{
     height: 200px;
   }
+
+ 
+  #tituloPopUp{
+    font-size: 15px;
+  }
+
+  
 }
 
 
