@@ -197,6 +197,9 @@ button:hover {
   color: orangered;
 }
 
+/*sessao cards*/
+
+
 /* Imagens do Card */
 img {
   width: 100%;
@@ -217,25 +220,65 @@ h2 {
 }
 
 @media (max-width: 550px) {
-  button {
-    width: 75%;
+  header{
+    flex-direction: column;
   }
+  form{
+    margin-top: 30px;
+    height: 80vh;
+  }
+  button {
+    width: 100%;
+  }
+
+  
 }
 
 @media (max-width: 450px) {
   main {
     padding-top: 150px;
   }
-}
-
-@media (max-width: 350px) {
+  header{
+    flex-direction: column;
+  }
+  form{
+    height: 80vh;
+  }
   button {
     width: 100%;
   }
+
+  textarea{
+    height: 200px;
+  }
 }
 
-@media (max-width: 270px) {
-  main {
-    padding-top: 190px;
+@media (max-width: 350px) {
+  header{
+    flex-direction: column;
   }
+  form{
+    height: 80vh;
+  }
+  button {
+    width: 100%;
+  }
+
+  textarea{
+    height: 200px;
+  }
+}
+
+@media (max-width: 281px) {
+  header{
+    flex-direction: column;
+  }
+  main {
+    padding-top: 150px;
+  }
+
+  textarea{
+    height: 120px;
+  }
+
 }
